@@ -15,19 +15,21 @@
 
       <a-assets>
         <img id="card" src="Heading.png" />
-        <a-asset-item id="avatarModel" src="greenngine.glb"></a-asset-item>
+        <a-asset-item id="avatarModel" src="greenngine.glb" auto-rotate ></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="#card" position="0 0 0" height="0.552" width="1"></a-plane>
 
         <a-gltf-model 
           src="#avatarModel"
           position="0 0 0.1"
           scale="1 1 1"
-          animation="property: position; to: 0 0.1 0.1; dur: 1000; loop: true; dir: alternate">
+          animation="property: position; to: 0 0.1 0.1; dur: 1000; loop: true; dir: alternate"
+          
+         animation_rotate="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear">
+</a-gltf-model>
         </a-gltf-model>
 
       </a-entity>
